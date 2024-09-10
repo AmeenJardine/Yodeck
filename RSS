@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Ticker</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        .ticker-wrapper {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            background: #000;
+            color: #fff;
+            font-size: 24px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .ticker-text {
+            display: inline-block;
+            padding-left: 100%;
+            animation: ticker 20s linear infinite;
+        }
+        @keyframes ticker {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="ticker-wrapper">
+        <div class="ticker-text">
+            Breaking News: New Product Launch! | Upcoming Event: Annual Meeting | Daily Tip: Stay Hydrated!
+        </div>
+    </div>
+</body>
+</html>
